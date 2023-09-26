@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task7</title>
+    <script>
+        function reverseNo(no) {
+            var rev = 0;
+            while (no > 0) {
+                rev = rev * 10 + no % 10;
+                no = Math.floor(no / 10);
+            }
+            return rev;
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Task 7</h1>
+        <form>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Task 7</th>
+                </tr>
+                <tr>
+                    <td>Enter a no.</td>
+                    <td><input type="number" id="no" name="no"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Reverse"
+                            onclick="alert(reverseNo(document.getElementById('no').value))"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+</html>

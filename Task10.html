@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task10</title>
+    <script>
+        //show date button
+        function showDate() {
+            var d = new Date();
+            alert(d);
+        }
+        //show time button
+        function showTime() {
+            var d = new Date();
+            alert(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Task 10</h1>
+        <form>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Task 10</th>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Show Date" onclick="showDate()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Show Time" onclick="showTime()"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

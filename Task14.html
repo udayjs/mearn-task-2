@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task 14</title>
+    <style>
+        p {
+            color: red;
+        }
+        body {
+            background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+        }
+
+        fname {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        lname {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        email {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        pass {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        repass {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        age {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        phone {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        address {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        state {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        country {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        fname1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        lname1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        email1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        pass1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        repass1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        age1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        phone1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        address1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        state1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        country1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+    <script>
+        //error for empty fields
+        function submit() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var repass = document.getElementById("repass").value;
+            var age = document.getElementById("age").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+            var state = document.getElementById("state").value;
+            var country = document.getElementById("country").value;
+            if (fname == "") {
+                document.getElementById("fname1").innerHTML = "First name must be filled out";
+            }
+            if (lname == "") {
+                document.getElementById("lname1").innerHTML = "Last name must be filled out";
+            }
+            if (email == "") {
+                document.getElementById("email1").innerHTML = "Email must be filled out";
+            }
+            if (pass == "") {
+                document.getElementById("pass1").innerHTML = "Password must be filled out";
+            }
+            if (repass == "") {
+                document.getElementById("repass1").innerHTML = "Re-enter password must be filled out";
+            }
+            if (age == "") {
+                document.getElementById("age1").innerHTML = "Age must be filled out";
+            }
+            if (phone == "") {
+                document.getElementById("phone1").innerHTML = "Phone number must be filled out";
+            }
+            if (address == "") {
+                document.getElementById("address1").innerHTML = "Address must be filled out";
+            }
+            if (state == "") {
+                document.getElementById("state1").innerHTML = "State must be filled out";
+            }
+            if (country == "") {
+                document.getElementById("country1").innerHTML = "Country must be filled out";
+            }
+            //error for password mismatch
+            if (pass != repass) {
+                document.getElementById("repass1").innerHTML = "Password mismatch";
+            }
+            //error for invalid email
+            if (email != "") {
+                var atposition = email.indexOf("@");
+                var dotposition = email.lastIndexOf(".");
+                if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
+                    document.getElementById("email1").innerHTML = "Invalid email";
+                }
+            }
+            //error for invalid phone number
+            if (phone != "") {
+                var phoneno = /^\d{10}$/;
+                if (phone.match(phoneno)) {
+                    return true;
+                } else {
+                    document.getElementById("phone1").innerHTML = "Invalid phone number";
+                }
+            }
+            //error for invalid age
+            if (age != "") {
+                if (age < 18 || age > 60) {
+                    document.getElementById("age1").innerHTML = "Invalid age";
+                }
+            }
+            //error for invalid state
+            if (state != "") {
+                if (state.length < 3 || state.length > 20) {
+                    document.getElementById("state1").innerHTML = "Invalid state";
+                }
+            }
+            //error for invalid country
+            if (country != "") {
+                if (country.length < 3 || country.length > 20) {
+                    document.getElementById("country1").innerHTML = "Invalid country";
+                }
+            }
+            //error for invalid address
+            if (address != "") {
+                if (address.length < 3 || address.length > 20) {
+                    document.getElementById("address1").innerHTML = "Invalid address";
+                }
+            }
+            //error for invalid first name
+            if (fname != "") {
+                if (fname.length < 3 || fname.length > 20) {
+                    document.getElementById("fname1").innerHTML = "Invalid first name";
+                }
+            }
+            //error for invalid last name
+            if (lname != "") {
+                if (lname.length < 3 || lname.length > 20) {
+                    document.getElementById("lname1").innerHTML = "Invalid last name";
+                }
+            }
+            //error for poor password
+            if (pass != "") {
+                if (pass.length < 8 || pass.length > 20) {
+                    document.getElementById("pass1").innerHTML = "Password must be 8-20 characters long";
+                }
+            }
+            //error for invalid password
+            if (pass != "") {
+                var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+                if (pass.match(passw)) {
+                    return true;
+                } else {
+                    document.getElementById("pass1").innerHTML = "Invalid password";
+                }
+            }
+            //error for invalid re-enter password
+            if (repass != pass) {
+                document.getElementById("repass1").innerHTML = "Password must be 8-20 characters long";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <center>
+        <h1>Registration form</h1><br><br>
+        first name: <input type="text" id="fname">
+        <p id="fname1"></p><br>
+        last name: <input type="text" id="lname">
+        <p id="lname1"></p><br>
+        email: <input type="text" id="email">
+        <p id="email1"></p><br>
+        password: <input type="password" id="pass">
+        <p id="pass1"></p><br>
+        re-enter password: <input type="password" id="repass">
+        <p id="repass1"></p><br>
+        age: <input type="text" id="age">
+        <p id="age1"></p><br>
+        gender: <input type="radio" id="html" name="fav_language" value="HTML" style="vertical-align: text-top;">
+        <label for="html">Male</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS" style="vertical-align: text-bottom;">
+        <label for="css">Female</label><br><br>
+        phone number: <input type="text" id="phone">
+        <p id="phone1"></p><br>
+        address: <textarea id="address" name="address" rows="5" cols="40"
+            style="vertical-align: text-top;"></textarea>
+        <p id="address1"></p><br>
+        state: <input type="text" id="state">
+        <p id="state1"></p><br>
+        country: <input type="text" id="country">
+        <p id="country1"></p><br>
+        language known: <input type="checkbox" id="html" name="fav_language" value="HTML"
+            style="vertical-align: text-top;">
+        <label for="html">Hindi</label><br>
+        <input type="checkbox" id="css" name="fav_language" value="CSS" style="vertical-align: text-top;">
+        <label for="css">English</label><br>
+        <input type="checkbox" id="js" name="fav_language" value="JavaScript" style="vertical-align: text-top;">
+        <label for="js">Germany</label><br><br>
+        <input type="button" value="Submit" onclick="submit()">
+    </center>
+</body>

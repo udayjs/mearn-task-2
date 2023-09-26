@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task9</title>
+    <script>
+        function multiply(a, b) {
+            return a * b;
+        }
+        function divide(a, b) {
+            return a / b;
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Task 9</h1>
+        <form>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Task 9</th>
+                </tr>
+                <tr>
+                    <td>Enter 1st no.</td>
+                    <td><input type="number" id="no1" name="no1"></td>
+                </tr>
+                <tr>
+                    <td>Enter 2nd no.</td>
+                    <td><input type="number" id="no2" name="no2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Multiply"
+                            onclick="alert(multiply(document.getElementById('no1').value,document.getElementById('no2').value))"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Divide"
+                            onclick="alert(divide(document.getElementById('no1').value,document.getElementById('no2').value))"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+
+</html>

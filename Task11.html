@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task11</title>
+    <script>
+        function submit() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var website = document.getElementById("website").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "") {
+                document.getElementById("demo").innerHTML = "Name must be filled out";
+            }
+            if (email == "") {
+                document.getElementById("email1").innerHTML = "Email must be filled out";
+            }
+            if (website == "") {
+                document.getElementById("web").innerHTML = "Website must be filled out";
+            }
+            if (message == "") {
+                document.getElementById("msg").innerHTML = "Message must be filled out";
+            }
+
+            else {
+                alert("Name: " + name + "\nEmail: " + email + "\nWebsite: " + website + "\nMessage: " + message);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center style="padding-top: 100px;">
+        Name: <input type="text" id="name" name="name">
+        <p id="demo" style="vertical-align: baseline;"></p>
+        Email: <input type="text" id="email" name="email">
+        <p id="email1"></p>
+        Website: <input type="text" id="website" name="website">
+        <p id="web"></p>
+        Message: <textarea id="message" name="message" rows="5" cols="40" style="vertical-align: text-top;"></textarea><p id="msg" style="text-align: end;"></p><br><br>
+        <input type="button" value="Submit" onclick="submit()">
+    </center>
+</body>
+
+</html>
